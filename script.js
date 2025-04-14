@@ -1,12 +1,12 @@
-const inputs = document.querySelectorAll('.controls input');
+// const inputs = document.querySelectorAll('.controls input');
 
-    function handleUpdate() {
-      const suffix = this.dataset.sizing || '';
-      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
-    }
+//     function handleUpdate() {
+//       const suffix = this.dataset.sizing || '';
+//       document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+//     }
 
-    inputs.forEach(input => input.addEventListener('change', handleUpdate));
-    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
+//     inputs.forEach(input => input.addEventListener('change', handleUpdate));
+//     inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
 
 
 
@@ -16,7 +16,7 @@ const inputs = document.querySelectorAll('.controls input');
    const playButton=document.querySelector("#play-btn")
    const playBackSpeed=document.querySelector("#playbackSpeed")
 const volume = document.querySelector("#volume");
-const rewindBtn = document.querySelector("#rewindBtn");
+const rewindBtn = document.querySelector(".rewind");
 const skipBtn = document.querySelector("#skipBtn");
 const progressBar = document.querySelector("#progress__filled");
 const speedBar = document.querySelector(".speed-bar");
@@ -47,7 +47,7 @@ rewindBtn.addEventListener("click", () => {
 });
 
 skipBtn.addEventListener("click", () => {
-    video.currentTime += 0.25;
+    video.currentTime += 0.75;
 });
 
 video.addEventListener("timeupdate", () => {
