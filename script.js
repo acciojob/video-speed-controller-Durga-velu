@@ -43,11 +43,11 @@ volume.addEventListener("input", (e) => {
     video.volume = e.target.value / 10;
   });
 rewindBtn.addEventListener("click", () => {
-    video.currentTime = Math.max(0, video.currentTime - 5);
+    video.currentTime -=  5);
 });
 
 skipBtn.addEventListener("click", () => {
-    video.currentTime += 0.75;
+    video.currentTime += 8;
 });
 
 video.addEventListener("timeupdate", () => {
