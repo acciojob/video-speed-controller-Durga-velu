@@ -42,9 +42,8 @@ playBackSpeed.addEventListener("input", (e) => {
 volume.addEventListener("input", (e) => {
     video.volume = e.target.value / 10;
   });
-
 rewindBtn.addEventListener("click", () => {
-    video.currentTime -= 0.8;
+    video.currentTime = Math.max(0, video.currentTime - 5);
 });
 
 skipBtn.addEventListener("click", () => {
