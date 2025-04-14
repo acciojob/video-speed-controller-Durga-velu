@@ -11,7 +11,7 @@ const inputs = document.querySelectorAll('.controls input');
 
 
 
-   const video=document.querySelector("#player__video")
+   const video=document.querySelector(".player__video")
 
    const playButton=document.querySelector("#play-btn")
    const playBackSpeed=document.querySelector("#playbackSpeed")
