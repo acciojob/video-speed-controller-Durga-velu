@@ -61,7 +61,13 @@ video.addEventListener("timeupdate", () => {
 
 
 
-
+const toggleButtons = document.querySelectorAll(".toggle");
+toggleButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    // Do something when any .toggle button is clicked
+    console.log("Toggle button clicked!");
+  });
+});
 
 
 
