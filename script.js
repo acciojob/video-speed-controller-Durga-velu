@@ -14,7 +14,7 @@ const inputs = document.querySelectorAll('.controls input');
    const video=document.querySelector(".player__video")
 
   
-   const playButton=document.querySelector("#play-btn")
+   const playButton=document.querySelector(".toggle")
    const playBackSpeed=document.querySelector("#playbackSpeed")
 const volume = document.querySelector("#volume");
 const rewindBtn = document.querySelector("#rewindBtn");
