@@ -11,7 +11,7 @@ const inputs = document.querySelectorAll('.controls input');
 
 
 
-   const video=document.querySelector("video")
+   const video=document.querySelector(".player__video")
 
    const playButton=document.querySelector("#play-btn")
    const playBackSpeed=document.querySelector("#playbackSpeed")
@@ -38,7 +38,6 @@ playBackSpeed.addEventListener("input", (e) => {
     speedBar.textContent = `${e.target.value}`;
   });
   
-
 
 volume.addEventListener("input", (e) => {
     video.volume = e.target.value / 10;
