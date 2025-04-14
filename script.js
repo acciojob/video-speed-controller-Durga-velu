@@ -48,7 +48,7 @@ rewindBtn.addEventListener("click", () => {
 });
 
 skipBtn.addEventListener("click", () => {
-    video.currentTime +=25;
+   video.currentTime = Math.min(video.duration, video.currentTime + 25);
 });
 
 
