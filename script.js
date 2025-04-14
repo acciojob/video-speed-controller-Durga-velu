@@ -13,13 +13,14 @@
 
    const video=document.querySelector(".player__video")
 
+  
    const playButton=document.querySelector("#play-btn")
    const playBackSpeed=document.querySelector("#playbackSpeed")
 const volume = document.querySelector("#volume");
-const skipButtons = player.querySelectorAll("[data-skip]");
+const rewindBtn = document.querySelector(".rewind");
+const skipBtn = document.querySelector("#skipBtn");
 const progressBar = document.querySelector("#progress__filled");
 const speedBar = document.querySelector(".speed-bar");
-
 playButton.addEventListener(("click"),(e)=>{
     if(video.paused){
         video.play();
@@ -42,16 +43,15 @@ volume.addEventListener("input", (e) => {
     video.volume = e.target.value / 10;
   });
 
+rewindBtn.addEventListener("click", () => {
+    video.currentTime -= 0.5;
+});
+
+skipBtn.addEventListener("click", () => {
+    video.currentTime += 0.25;
+});
 
 
-for (let skip of skipButtons) {
-  skip.addEventListener("click", forwardOrBackward);
-}
-
-function forwardOrBackward(event) {
-  let element = event.target;
-  video.currentTime += parseFloat(element.attributes["data-skip"].value);
-}
 video.addEventListener("timeupdate", () => {
     const percent = (video.currentTime / video.duration) * 100;
     progressBar.style.width = `${percent}%`;
