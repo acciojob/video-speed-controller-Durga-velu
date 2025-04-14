@@ -44,11 +44,11 @@ volume.addEventListener("input", (e) => {
   });
 
 rewindBtn.addEventListener("click", () => {
-    video.currentTime -= 0.5;
+    video.currentTime -=5;
 });
 
 skipBtn.addEventListener("click", () => {
-    video.currentTime += 0.25;
+    video.currentTime +=25;
 });
 
 
